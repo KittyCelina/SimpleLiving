@@ -1,3 +1,6 @@
+<?php
+include_once 'functions/authentication.php';
+?>
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
@@ -29,7 +32,7 @@
             <div id="content">
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Users Management</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Create User</a>
+                        <h3 class="text-dark mb-0">Users Management</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" data-bs-target="#add" data-bs-toggle="modal"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Create User</a>
                     </div>
                     <div class="card shadow">
                         <div class="card-header py-3">
@@ -48,13 +51,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" alt="blank profile picture, mystery man, avatar" width="30" height="30" src="assets/img/user.png">Airi Satou</td>
-                                            <td>0</td>
-                                            <td>000000</td>
-                                            <td>2008/11/28</td>
-                                            <td class="text-center"><a class="btn btn-primary btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Logs</a><a class="btn btn-warning btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Update</a><a class="btn btn-danger btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Remove</a></td>
-                                        </tr>
+                                        <?php include_once 'functions/views/users.php'?>
                                     </tbody>
                                     <tfoot>
                                         <tr></tr>
@@ -117,17 +114,58 @@
                     <p>Relay Information</p>
                     <form method="post" action="functions/add-user.php">
                         <div class="form-floating mb-3"><input class="form-control" type="text" name="username" placeholder="username"><label class="form-label">Username</label></div>
-                        <div class="form-floating mb-3"><input class="form-control" type="text" name="password" placeholder="password"><label class="form-label">Password</label></div>
+                        <div class="form-floating mb-3"><input class="form-control" type="password" name="password" placeholder="password"><label class="form-label">Password</label></div>
                         <div class="form-floating mb-3"><select class="form-select form-control" name="level">
                                 <optgroup label="Permission Level">
                                     <option value="1">Level 1</option>
                                     <option value="2">Level 2</option>
                                 </optgroup>
                             </select><label class="form-label">Permission Level</label></div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
                     </form>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
             </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="update">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">New User</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Relay Information</p>
+                    <form method="post" action="functions/update-user.php">
+                        <input type="hidden" name="id">
+                        <div class="form-floating mb-3"><input class="form-control" type="text" name="username" placeholder="username"><label class="form-label">Username</label></div>
+                        <div class="form-floating mb-3"><input class="form-control" type="password" name="password" placeholder="password"><label class="form-label">Password</label></div>
+                        <div class="form-floating mb-3"><select class="form-select form-control" name="level">
+                                <optgroup label="Permission Level">
+                                    <option value="1">Level 1</option>
+                                    <option value="2">Level 2</option>
+                                </optgroup>
+                            </select><label class="form-label">Permission Level</label></div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="remove">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove User</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                <form action="functions/remove-user.php" method="post">
+                    <input type="hidden" name="id" value="">
+                    <p>Are you sure you want to remove this relay?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button><button class="btn btn-danger" type="submit">Yes</button></div>
+                        </form>
+                </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -165,15 +203,13 @@
 
             $('a[data-bs-target="#update"]').on('click', function() {
                 var id = $(this).data('id');
-                var name = $(this).data('name');
-                var device = $(this).data('device');
-                var relay = $(this).data('relay');
+                var username = $(this).data('username');
+                var password = $(this).data('password');
                 var level = $(this).data('level');
                 console.log(id);
                 $('input[name="id"]').val(id);
-                $('input[name="name"]').val(name);
-                $('select[name="device"]').val(device);
-                $('select[name="relay"]').val(relay);
+                $('input[name="username"]').val(username);
+                $('select[name="password"]').val(password);
                 $('select[name="level"]').val(level);
             });
 
