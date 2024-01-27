@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Manila');
 $database = 'smartliving';
-$db = new PDO('mysql:host=localhost', 'root', '');
+$db = new PDO('mysql:host=localhost', 'root', 'root1');
 $query = "CREATE DATABASE IF NOT EXISTS $database";
 
 try {

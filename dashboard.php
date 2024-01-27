@@ -170,9 +170,8 @@ include_once 'functions/views/dashboard-count.php';
                     console.log(ip_address, relay, 'on');
                     $.post("http://" + ip_address + "/relay" + relay + "/on", {}, function(data) {
                         swal("Success", "Relay " + relay + " is turned on!", "success");
-                    }).fail(function() {
-                        swal("Error", "An error occurred while turning on Relay " + relay + "!", "error");
-                    });
+                    })
+                    swal("Turn On", "Relay " + relay + " is turned off!", "success");
                 });
             });
 
@@ -183,9 +182,8 @@ include_once 'functions/views/dashboard-count.php';
                     console.log(ip_address, relay, 'off');
                     $.post("http://" + ip_address + "/relay" + relay + "/off", {}, function(data) {
                         swal("Error", "Relay " + relay + " is turned off!", "error");
-                    }).fail(function() {
-                        swal("Error", "An error occurred while turning on Relay " + relay + "!", "error");
-                    });
+                    })
+                    swal("Turn off", "Relay " + relay + " is turned off!", "error");
                 });
             });
 
