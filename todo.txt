@@ -1,0 +1,13 @@
+Database Creation
+Database Structure
+Database Initialization
+
+Login Page
+Authorization
+
+Device Registration
+Device Modification
+Device Deletion
+Device Listing
+
+Relay

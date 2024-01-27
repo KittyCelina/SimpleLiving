@@ -6,9 +6,10 @@ $name = $_POST['device_name'];
 $ip_address = $_POST['ip_address'];
 $relays = $_POST['relays'];
 
-$sql = "SELECT * FROM `devices` WHERE `ip_address` = :ip_address";
+$sql = "SELECT * FROM `devices` WHERE `ip_address` = :ip_address AND `id` != :id";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':ip_address', $ip_address);
+$stmt->bindParam(':id', $id);
 $stmt->execute();
 
 if ($stmt->rowCount() > 0) {

@@ -131,7 +131,7 @@
                 </div>
                 <div class="modal-body">
                     <p>Device Information</p>
-                    <form action="functions/add-device.php" method="post">
+                    <form action="functions/update-device.php" method="post">
                         <input type="hidden" name="id" value="">
                         <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Device Name" name="device_name"><label class="form-label">Name</label></div>
                         <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="IP Address" name="ip_address"><label class="form-label">IP Address</label></div>
