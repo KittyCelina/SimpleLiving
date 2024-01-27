@@ -92,75 +92,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card shadow mb-4">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                    <div class="container-fluid py-5">
+                        <div class="row gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4">
+                                        <h2 class="text-center card-title">Bulb</h2>
+                                        <div class="d-flex mb-2"><img class="img-thumbnail flex-shrink-0 me-3 fit-cover" alt="processor, core, chip" width="50" height="50" src="assets/img/chip.png">
+                                            <div>
+                                                <p class="fw-bold mb-0">{device.name}</p>
+                                                <p class="text-muted mb-0">{relay.id}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col"><button class="btn btn-success w-100 my-1" type="button">Turn On</button></div>
+                                            <div class="col"><button class="btn btn-danger w-100 my-1" type="button">Turn Off</button></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
-                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row text-center justify-content-center mb-5">
-                    <div class="col-lg-8 col-xl-6">
-                        <h2 class="font-weight-bold">Development</h2>
-                        <p class="text-muted">We’re very proud of the path we’ve taken. Explore the history that made us the company we are today.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div data-aos="fade-up" class="timeline-steps aos-init">
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2003</p>
-                                    <p class="text-muted h6 mb-0 mb-lg-0">Favland Founded</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2004</p>
-                                    <p class="text-muted h6 mb-0 mb-lg-0">Launched Trello</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2005</p>
-                                    <p class="text-muted h6 mb-0 mb-lg-0">Launched Messanger</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2010</p>
-                                    <p class="text-muted h6 mb-0 mb-lg-0">Open New Branch</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step mb-0">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2020</p>
-                                    <p class="text-muted h6 mb-0 mb-lg-0">In Fortune 500</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Smart Living 2024</span></div>

@@ -15,19 +15,7 @@
 </head>
 
 <body id="page-top">
-    <div class="modal fade" role="dialog" tabindex="-1" id="add">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>The content of your modal.</p>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-            </div>
-        </div>
-    </div>
+
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm mb-4">
@@ -41,56 +29,34 @@
             <div id="content">
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Device Management</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Add Device</a>
+                        <h3 class="text-dark mb-0">Device Management</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" data-bs-target="#add" data-bs-toggle="modal"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Add Device</a>
                     </div>
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold">Device Lists</p>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
                                             <th>IP Address</th>
                                             <th>No. Relays</th>
-                                            <th>Status</th>
+
                                             <th>Created At</th>
                                             <th class="text-center">Option</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td><img class="img-thumbnail me-2" alt="processor, core, chip" width="30" height="30" src="assets/img/chip.png">Arduino #1</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>Status</td>
-                                            <td>2008/11/28</td>
-                                            <td class="text-center"><a class="btn btn-warning btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Update</a><a class="btn btn-danger btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Remove</a></td>
-                                        </tr>
+                                        <?php include_once 'functions/views/devices.php'; ?>
                                     </tbody>
                                     <tfoot>
                                         <tr></tr>
                                     </tfoot>
                                 </table>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,10 +102,119 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="add">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">New Device</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Device Information</p>
+                    <form action="functions/add-device.php" method="post">
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Device Name" name="device_name"><label class="form-label">Name</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="IP Address" name="ip_address"><label class="form-label">IP Address</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="number" placeholder="Relays" name="relays" min="1" value="1" max="4"><label class="form-label">No. Relay</label></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="update">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Device</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Device Information</p>
+                    <form action="functions/add-device.php" method="post">
+                        <input type="hidden" name="id" value="">
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Device Name" name="device_name"><label class="form-label">Name</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="IP Address" name="ip_address"><label class="form-label">IP Address</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="number" placeholder="Relays" name="relays" min="1" value="1" max="4"><label class="form-label">No. Relay</label></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="remove">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Device</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                <form action="functions/remove-device.php" method="post">
+                    <input type="hidden" name="id" value="">
+                    <p>Are you sure you want to remove this device?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button><button class="btn btn-danger" type="submit">Yes</button></div>
+                        </form>
+                </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/jszip.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/buttons.html5.min.js"></script>
+    <script src="assets/js/buttons.print.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                dom: 'Blfrtip',
+                buttons: [{
+                        extend: 'excel',
+                        className: 'btn btn-primary'
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'btn btn-primary'
+                    },
+                    {
+                        extend: 'print',
+                        className: 'btn btn-primary'
+                    }
+                ]
+            });
+
+            $('a[data-bs-target="#update"]').on('click', function() {
+                var id = $(this).data('id');
+                var device_name = $(this).data('name');
+                var ip_address = $(this).data('ip_address');
+                var relays = $(this).data('relays');
+                console.log(id);
+                $('input[name="id"]').val(id);
+                $('input[name="device_name"]').val(device_name);
+                $('input[name="ip_address"]').val(ip_address);
+                $('input[name="relays"]').val(relays);
+            });
+
+            $('a[data-bs-target="#remove"]').on('click', function() {
+                var id = $(this).data('id');
+                console.log(id);
+                $('input[name="id"]').val(id);
+            });
+
+        });
+    </script>
 </body>
 
 </html>
