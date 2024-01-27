@@ -22,7 +22,7 @@ include_once 'functions/authentication.php';
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm mb-4">
-                <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="dashboard.php">
                         <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-heart-fill">
                                 <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
                                 <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
@@ -96,7 +96,7 @@ include_once 'functions/authentication.php';
             </div>
             <div>
                 <hr>
-                <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong>{users.username}</strong>&nbsp;</a>
+                <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong><?=$_SESSION['username']?></strong>&nbsp;</a>
                     <div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Profile</a>
                         <div class="dropdown-divider"></div><a class="dropdown-item" href="functions/logout.php">Sign out</a>
                     </div>

@@ -1,5 +1,6 @@
 <?php
 include_once 'functions/authentication.php';
+include_once 'functions/views/dashboard-count.php';
 ?>
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
@@ -19,10 +20,10 @@ include_once 'functions/authentication.php';
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
+    <div id="wrapper bg-white">
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm mb-4">
-                <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="dashboard.php">
                         <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-heart-fill">
                                 <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
                                 <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
@@ -41,7 +42,7 @@ include_once 'functions/authentication.php';
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Devices</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>0</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?= DevicesCount() ?></span></div>
                                         </div>
                                         <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-boxes text-primary fa-2x">
                                                 <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"></path>
@@ -56,7 +57,7 @@ include_once 'functions/authentication.php';
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Relays</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>0</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?= RelaysCount() ?></span></div>
                                         </div>
                                         <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bounding-box text-success fa-2x">
                                                 <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z"></path>
@@ -71,7 +72,7 @@ include_once 'functions/authentication.php';
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span class="text-info">Users</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>0</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?= UsersCount() ?></span></div>
                                         </div>
                                         <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="text-info fa-2x">
                                                 <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
@@ -87,7 +88,7 @@ include_once 'functions/authentication.php';
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span class="text-info">Date &amp; Time</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>00/00/0000 00:00</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span id="time_date">00/00/0000 00:00</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
                                     </div>
@@ -97,24 +98,7 @@ include_once 'functions/authentication.php';
                     </div>
                     <div class="container-fluid py-5">
                         <div class="row gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body p-4">
-                                        <h2 class="text-center card-title">Bulb</h2>
-                                        <div class="d-flex mb-2"><img class="img-thumbnail flex-shrink-0 me-3 fit-cover" alt="processor, core, chip" width="50" height="50" src="assets/img/chip.png">
-                                            <div>
-                                                <p class="fw-bold mb-0">{device.name}</p>
-                                                <p class="text-muted mb-0">{relay.id}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col"><button class="btn btn-success w-100 my-1" type="button">Turn On</button></div>
-                                            <div class="col"><button class="btn btn-danger w-100 my-1" type="button">Turn Off</button></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            <?php include 'functions/views/switch.php' ?>
                         </div>
                     </div>
                 </div>
@@ -153,7 +137,7 @@ include_once 'functions/authentication.php';
             </div>
             <div>
                 <hr>
-                <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong>{users.username}</strong>&nbsp;</a>
+                <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong><?= $_SESSION['username'] ?></strong>&nbsp;</a>
                     <div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Profile</a>
                         <div class="dropdown-divider"></div><a class="dropdown-item" href="functions/logout.php">Sign out</a>
                     </div>
@@ -161,12 +145,62 @@ include_once 'functions/authentication.php';
             </div>
         </div>
     </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/aos.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/jszip.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/buttons.html5.min.js"></script>
+    <script src="assets/js/buttons.print.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            const switch_on = document.querySelectorAll('.relay-on');
+            const switch_off = document.querySelectorAll('.relay-off');
+
+
+            switch_on.forEach(turn_on => {
+                turn_on.addEventListener('click', function handleClick(event) {
+                    var ip_address = $(this).data('ip_address');
+                    var relay = $(this).data('relay');
+                    console.log(ip_address, relay, 'on');
+                    $.post("http://" + ip_address + "/relay" + relay + "/on", {}, function(data) {
+                        swal("Success", "Relay " + relay + " is turned on!", "success");
+                    }).fail(function() {
+                        swal("Error", "An error occurred while turning on Relay " + relay + "!", "error");
+                    });
+                });
+            });
+
+            switch_off.forEach(turn_off => {
+                turn_off.addEventListener('click', function handleClick(event) {
+                    var ip_address = $(this).data('ip_address');
+                    var relay = $(this).data('relay');
+                    console.log(ip_address, relay, 'off');
+                    $.post("http://" + ip_address + "/relay" + relay + "/off", {}, function(data) {
+                        swal("Error", "Relay " + relay + " is turned off!", "error");
+                    }).fail(function() {
+                        swal("Error", "An error occurred while turning on Relay " + relay + "!", "error");
+                    });
+                });
+            });
+
+            function updateTimeDate() {
+                var currentTime = new Date();
+                document.getElementById("time_date").innerHTML = currentTime;
+            }
+
+            // Call updateTimeDate function every 1 second
+            setInterval(updateTimeDate, 1000);
+        });
+    </script>
 </body>
 
 </html>

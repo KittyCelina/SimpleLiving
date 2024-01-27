@@ -1,41 +1,32 @@
 <?php
 include_once 'functions/connection.php';
 
-function calculateMonthlyEarnings() {
+function DevicesCount() {
     global $db;
-    $sql = 'SELECT SUM(total) AS monthlyEarnings FROM payments WHERE MONTH(created_at) = MONTH(CURRENT_DATE())';
+    $sql = 'SELECT COUNT(*) AS total FROM `devices`';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetch();
-    $monthlyEarnings = $result['monthlyEarnings'];
-    return $monthlyEarnings;
+    $total = $result['total'];
+    return $total;
 }
 
-function calculateYearlyEarnings() {
+function RelaysCount() {
     global $db;
-    $sql = 'SELECT SUM(total) AS yearlyEarnings FROM payments WHERE YEAR(created_at) = YEAR(CURRENT_DATE())';
+    $sql = 'SELECT COUNT(*) AS total FROM `relays`';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetch();
-    $yearlyEarnings = $result['yearlyEarnings'];
-    return $yearlyEarnings;
+    $total = $result['total'];
+    return $total;
 }
 
-function countTotalBoarders() {
+function UsersCount() {
     global $db;
-    $sql = 'SELECT COUNT(*) AS totalBoarders FROM boarders';
+    $sql = 'SELECT COUNT(*) AS total FROM `users`';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetch();
-    $totalBoarders = $result['totalBoarders'];
-    return $totalBoarders;
-}
-function countTotalRooms() {
-    global $db;
-    $sql = 'SELECT COUNT(*) AS totalRooms FROM rooms';
-    $stmt = $db->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetch();
-    $totalRooms = $result['totalRooms'];
-    return $totalRooms;
+    $total = $result['total'];
+    return $total;
 }
