@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+    header('Location: ./dashboard.php');
+}
+?>
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
@@ -113,12 +119,12 @@
                     <h4 class="modal-title">Login</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post">
+                    <form method="post" action="functions/login.php">
                         <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Username" name="username"><label class="form-label">Username</label></div>
                         <div class="form-floating mb-3"><input class="form-control form-control" type="password" placeholder="Password" name="password"><label class="form-label">Password</label></div>
-                    </form>
-                </div>
-                <div class="modal-footer"><button class="btn btn-primary" type="button">Login</button></div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-primary" type="submit">Login</button></div>
+                </form>
             </div>
         </div>
     </div>
@@ -126,6 +132,8 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
