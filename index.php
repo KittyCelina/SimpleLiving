@@ -29,30 +29,42 @@ if (isset($_SESSION['username'])) {
                                 <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
                                 <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
                             </svg></div><span>Smart Living</span>
-                    </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    </a>
                     <div class="collapse navbar-collapse" id="navcol-2">
-                        <ul class="navbar-nav ms-auto"></ul><button class="btn btn-primary ms-md-2" type="button" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                        <ul class="navbar-nav ms-auto"></ul><button class="btn btn-primary ms-md-2 d-none" type="button" data-bs-toggle="modal" data-bs-target="#login">Login</button>
                     </div>
                 </div>
             </nav>
             <div id="content">
-                <div class="container-fluid">
-                    <section class="py-4 py-xl-5">
-                        <div class="container">
-                            <div class="bg-dark border rounded border-0 border-dark overflow-hidden">
-                                <div class="row g-0">
-                                    <div class="col-md-6">
-                                        <div class="text-white p-4 p-md-5">
-                                            <h2 class="fw-bold text-white mb-3">Smart Living - Home Automation</h2>
-                                            <p class="mb-4">Elevate your living spaces effortlessly with our smart home solutions. Control lights, home devices, and security at your fingertips. Experience the simplicity of Smart Living, where convenience meets innovation.</p>
-                                            <div class="my-3"><button class="btn btn-primary btn-lg me-2" type="button" data-bs-target="#login" data-bs-toggle="modal">Login</button><a class="btn btn-light btn-lg" role="button" href="#">Contact Us</a></div>
-                                        </div>
+                <div class="shadow-lg" style="height: 700px;background: linear-gradient(91deg, rgba(0,0,0,0.00), #1a3c65), url('assets/img/smartliving.png') center / cover;">
+                    <div class="container-fluid h-100">
+                        <div class="row justify-content-end h-100">
+  
+                            <div class="col-md-4 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                                <div style="max-width: 350px;"></div>
+                                <div class="card">
+                                    <div class="card-body d-flex flex-column align-items-center py-xl-5 px-xl-5"><img class="img-fluid mb-5" src="assets/img/hagohago.png" width="120em" />
+                                        <form action="functions/login.php" method="post">
+                                            <div class="mb-3 text-center">
+                                                <input class="form-control form-control-lg" type="text" name="username" placeholder="Username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : ''; ?>">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : ''; ?>">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input class="form-check-input" name="remember" type="checkbox" aria-label="remember" <?php echo isset($_COOKIE['username']) ? 'checked' : ''; ?>>
+                                                <label class="form-check-label text-dark" for="remember">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                            <div class="mb-3 text-center"><button class="btn btn-primary d-block w-100" type="submit">Login</button></div>
+                                            <p class="text-muted text-center">Smart Living - Home Automation System</p>
+                                        </form>
                                     </div>
-                                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/smart-home-img.jpg"></div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
                 <div class="container py-4 py-xl-5">
                     <div class="row mb-5">
@@ -122,8 +134,8 @@ if (isset($_SESSION['username'])) {
                     <form method="post" action="functions/login.php">
                         <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Username" name="username"><label class="form-label">Username</label></div>
                         <div class="form-floating mb-3"><input class="form-control form-control" type="password" placeholder="Password" name="password"><label class="form-label">Password</label></div>
-                    </div>
-                    <div class="modal-footer"><button class="btn btn-primary" type="submit">Login</button></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="submit">Login</button></div>
                 </form>
             </div>
         </div>
