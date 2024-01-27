@@ -15,19 +15,7 @@
 </head>
 
 <body id="page-top">
-    <div class="modal fade" role="dialog" tabindex="-1" id="add">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>The content of your modal.</p>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-            </div>
-        </div>
-    </div>
+    
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm mb-4">
@@ -48,14 +36,13 @@
                             <p class="text-primary m-0 fw-bold">Users Lists</p>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
                                             <th>Permission Level</th>
-                                            <th>Address</th>
-                                            <th>Phone</th>
                                             <th>Created At</th>
                                             <th class="text-center">Option</th>
                                         </tr>
@@ -64,7 +51,6 @@
                                         <tr>
                                             <td><img class="rounded-circle me-2" alt="blank profile picture, mystery man, avatar" width="30" height="30" src="assets/img/user.png">Airi Satou</td>
                                             <td>0</td>
-                                            <td>Tokyo</td>
                                             <td>000000</td>
                                             <td>2008/11/28</td>
                                             <td class="text-center"><a class="btn btn-primary btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Logs</a><a class="btn btn-warning btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Update</a><a class="btn btn-danger btn-sm d-none d-sm-inline-block mx-1 mt-1 mb-1" role="button" href="#"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Remove</a></td>
@@ -75,22 +61,7 @@
                                     </tfoot>
                                 </table>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -130,16 +101,90 @@
                 <hr>
                 <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong>{users.username}</strong>&nbsp;</a>
                     <div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Profile</a>
-                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Sign out</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="functions/logout.php">Sign out</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="add">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">New User</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Relay Information</p>
+                    <form method="post" action="functions/add-user.php">
+                        <div class="form-floating mb-3"><input class="form-control" type="text" name="username" placeholder="username"><label class="form-label">Username</label></div>
+                        <div class="form-floating mb-3"><input class="form-control" type="text" name="password" placeholder="password"><label class="form-label">Password</label></div>
+                        <div class="form-floating mb-3"><select class="form-select form-control" name="level">
+                                <optgroup label="Permission Level">
+                                    <option value="1">Level 1</option>
+                                    <option value="2">Level 2</option>
+                                </optgroup>
+                            </select><label class="form-label">Permission Level</label></div>
+                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
             </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/jszip.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/buttons.html5.min.js"></script>
+    <script src="assets/js/buttons.print.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                dom: 'Blfrtip',
+                buttons: [{
+                        extend: 'excel',
+                        className: 'btn btn-primary'
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'btn btn-primary'
+                    },
+                    {
+                        extend: 'print',
+                        className: 'btn btn-primary'
+                    }
+                ]
+            });
+
+            $('a[data-bs-target="#update"]').on('click', function() {
+                var id = $(this).data('id');
+                var name = $(this).data('name');
+                var device = $(this).data('device');
+                var relay = $(this).data('relay');
+                var level = $(this).data('level');
+                console.log(id);
+                $('input[name="id"]').val(id);
+                $('input[name="name"]').val(name);
+                $('select[name="device"]').val(device);
+                $('select[name="relay"]').val(relay);
+                $('select[name="level"]').val(level);
+            });
+
+            $('a[data-bs-target="#remove"]').on('click', function() {
+                var id = $(this).data('id');
+                console.log(id);
+                $('input[name="id"]').val(id);
+            });
+
+        });
+    </script>
 </body>
 
 </html>

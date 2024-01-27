@@ -10,4 +10,10 @@ Device Modification
 Device Deletion
 Device Listing
 
-Relay
+Relay Creation
+Relay Registration
+Relay Modification
+Relay Deletion
+Relay Listing
+
+Users Creation
