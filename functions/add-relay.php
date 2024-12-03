@@ -6,6 +6,15 @@ $device = $_POST['device'];
 $relay = $_POST['relay'];
 $level = $_POST['level'];
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if ($_SESSION['level'] != 0){
+    header('location: ../dashboard.php?type=error&message=You dont have permission!');
+    exit();
+}
+
 $sql = "SELECT * FROM `relays` WHERE `device` = :device AND `relay` = :relay";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':device', $device);

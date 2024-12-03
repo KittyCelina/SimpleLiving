@@ -6,6 +6,15 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $level = $_POST['level'];
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if ($_SESSION['level'] != 0){
+    header('location: ../dashboard.php?type=error&message=You dont have permission!');
+    exit();
+}
+
 $sql = "SELECT * FROM `users` WHERE `username` = :username AND `id` != :id";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':username', $username);
