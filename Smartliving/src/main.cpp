@@ -2,17 +2,23 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
+#include <DNSServer.h>
 
 #define WIFI_SSID "SmartLiving"
-#define WIFI_PASS "#12345678"
+#define WIFI_PASS "#A12345678"
+
+// WiFi credentials
+const char *ssid = "SmartPower";
+const char *password = "#12345678";
+
+DNSServer dnsServer;
+IPAddress apIP(10, 0, 0, 1);
 
 const int RELAY1_PIN = D1;
 const int RELAY2_PIN = D2;
 const int RELAY3_PIN = D3;
 const int RELAY4_PIN = D4;
 ESP8266WebServer server(80);
-MDNSResponder MDNS;
-
 
 void handleRelay1On()
 {
@@ -90,7 +96,12 @@ void setup()
   digitalWrite(RELAY2_PIN, HIGH);
   digitalWrite(RELAY3_PIN, HIGH);
   digitalWrite(RELAY4_PIN, HIGH);
-  WiFi.softAP("SmartLiving AP", "12345678");
+
+  // Set up WiFi and DNS server
+  WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
+  WiFi.softAP(ssid, password);
+  dnsServer.start(53, "*", apIP);
+
   WiFi.setHostname("SmartLiving");
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   while (WiFi.status() != WL_CONNECTED)
@@ -98,19 +109,15 @@ void setup()
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
-  if (MDNS.begin("SmartLiving", WiFi.localIP()))
-  {
-    server.on("/relay1/on", HTTP_POST, handleRelay1On);
-    server.on("/relay1/off", HTTP_POST, handleRelay1Off);
-    server.on("/relay2/on", HTTP_POST, handleRelay2On);
-    server.on("/relay2/off", HTTP_POST, handleRelay2Off);
-    server.on("/relay3/on", HTTP_POST, handleRelay3On);
-    server.on("/relay3/off", HTTP_POST, handleRelay3Off);
-    server.on("/relay4/on", HTTP_POST, handleRelay4On);
-    server.on("/relay4/off", HTTP_POST, handleRelay4Off);
-    server.begin();
-    MDNS.addService("http", "tcp", 80);
-  }
+  server.on("/relay1/on", HTTP_POST, handleRelay1On);
+  server.on("/relay1/off", HTTP_POST, handleRelay1Off);
+  server.on("/relay2/on", HTTP_POST, handleRelay2On);
+  server.on("/relay2/off", HTTP_POST, handleRelay2Off);
+  server.on("/relay3/on", HTTP_POST, handleRelay3On);
+  server.on("/relay3/off", HTTP_POST, handleRelay3Off);
+  server.on("/relay4/on", HTTP_POST, handleRelay4On);
+  server.on("/relay4/off", HTTP_POST, handleRelay4Off);
+  server.begin();
 }
 
 void loop()

@@ -10,8 +10,8 @@ if (isset($_SESSION['username'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Smart Living</title>
-    <meta name="description" content="Home Automation Systems">
+    <title>Dashboard - West Prime Smart Power Automation</title>
+    <meta name="description" content="Automation Systems">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Nunito.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])) {
                         <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-heart-fill">
                                 <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
                                 <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
-                            </svg></div><span>Smart Living</span>
+                            </svg></div><span>West Prime Smart Power Automation</span>
                     </a>
                     <div class="collapse navbar-collapse" id="navcol-2">
                         <ul class="navbar-nav ms-auto"></ul><button class="btn btn-primary ms-md-2 d-none" type="button" data-bs-toggle="modal" data-bs-target="#login">Login</button>
@@ -58,7 +58,7 @@ if (isset($_SESSION['username'])) {
                                                 </label>
                                             </div>
                                             <div class="mb-3 text-center"><button class="btn btn-primary d-block w-100" type="submit">Login</button></div>
-                                            <p class="text-muted text-center">Smart Living - Home Automation System</p>
+                                            <p class="text-muted text-center">West Prime Smart Power Automation - Automation System</p>
                                         </form>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ if (isset($_SESSION['username'])) {
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Smart Living 2024</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © West Prime Smart Power Automation 2024</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

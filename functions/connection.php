@@ -18,3 +18,16 @@ function generate_logs($type, $logs)
     $stmt->bindParam(':type', $type);
     $stmt->execute();
 }
+
+function generate_relay_logs($relay, $logs)
+{
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    global $db;
+    $sql = "INSERT INTO relay_logs (relay_id, logs) VALUES (:relay_id, :logs)";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':relay_id', $relay);
+    $stmt->bindParam(':logs', $logs);
+    $stmt->execute();
+}

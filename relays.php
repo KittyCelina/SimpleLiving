@@ -7,8 +7,8 @@ include_once 'functions/authentication.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - Smart Living</title>
-    <meta name="description" content="Home Automation Systems">
+    <title>Table - West Prime Smart Power Automation</title>
+    <meta name="description" content="Automation Systems">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Nunito.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -18,21 +18,35 @@ include_once 'functions/authentication.php';
 </head>
 
 <body id="page-top">
-    
+
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm mb-4">
                 <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="dashboard.php">
-                        <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-heart-fill">
-                                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
-                                <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
-                            </svg></div><span>Smart Living</span>
-                    </a><button class="btn btn-light ms-md-2" data-bs-toggle="offcanvas" data-bs-placement="left" type="button" data-bs-target="#offcanvas-menu" title="Here you can see all the menu list of the site such as (Dashboard, Customers, Rents and etc.)."><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+                        <div
+                            class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-house-heart-fill">
+                                <path
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z">
+                                </path>
+                                <path
+                                    d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018">
+                                </path>
+                            </svg></div><span>West Prime Smart Power Automation</span>
+                    </a><button class="btn btn-light ms-md-2" data-bs-toggle="offcanvas" data-bs-placement="left"
+                        type="button" data-bs-target="#offcanvas-menu"
+                        title="Here you can see all the menu list of the site such as (Dashboard, Customers, Rents and etc.)."><span
+                            class="visually-hidden">Toggle navigation</span><span
+                            class="navbar-toggler-icon"></span></button></div>
             </nav>
             <div id="content">
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Relay Management</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" data-bs-target="#add" data-bs-toggle="modal"><i class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;New Relay</a>
+                        <h3 class="text-dark mb-0">Relay Management</h3><a
+                            class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"
+                            data-bs-target="#add" data-bs-toggle="modal"><i
+                                class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;New Relay</a>
                     </div>
                     <div class="card shadow">
                         <div class="card-header py-3">
@@ -52,54 +66,91 @@ include_once 'functions/authentication.php';
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php include_once 'functions/views/relays.php'?>
+                                        <?php include_once 'functions/views/relays.php' ?>
                                     </tbody>
                                     <tfoot>
                                         <tr></tr>
                                     </tfoot>
                                 </table>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Smart Living 2024</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © West Prime Smart Power Automation 2024</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <div class="offcanvas offcanvas-end bg-body" tabindex="-1" id="offcanvas-menu">
-        <div class="offcanvas-header"><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bootstrap-fill me-3" style="font-size: 25px;">
-                    <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"></path>
-                    <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"></path>
-                </svg><span class="fs-4">Menu</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-header">
+            <h1>Menu</h1><button class="btn-close" type="button" aria-label="Close"
+                data-bs-dismiss="offcanvas"></button>
+        </div>
         <div class="offcanvas-body d-flex flex-column justify-content-between pt-0">
             <div>
                 <hr class="mt-0">
                 <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item"><a class="nav-link active link-light" href="dashboard.php" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door me-2">
-                                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"></path>
+                    <li class="nav-item"><a class="nav-link active link-light" href="dashboard.php"
+                            aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door me-2">
+                                <path
+                                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z">
+                                </path>
                             </svg> Dashboard</a></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="devices.php"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-boxes me-2">
-                                <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"></path>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="devices.php"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-boxes me-2">
+                                <path
+                                    d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z">
+                                </path>
                             </svg> Device</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="relays.php"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-grid me-2">
-                                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"></path>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="relays.php"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-grid me-2">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z">
+                                </path>
                             </svg>&nbsp;Relay</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="users.php"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people me-2">
-                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="users.php"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-people me-2">
+                                <path
+                                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4">
+                                </path>
                             </svg> Users</a></li>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="user_logs.php"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-people me-2">
+                                <path
+                                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4">
+                                </path>
+                            </svg> Users Logs</a></li>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="relay_logs.php"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-people me-2">
+                                <path
+                                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4">
+                                </path>
+                            </svg> Relay Logs</a></li>
                 </ul>
             </div>
             <div>
                 <hr>
-                <div class="dropdown"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="assets/img/user.png" style="object-fit: cover;"><strong><?=$_SESSION['username']?></strong>&nbsp;</a>
-                    <div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Profile</a>
-                        <div class="dropdown-divider"></div><a class="dropdown-item" href="functions/logout.php">Sign out</a>
+                <div class="dropdown"><a
+                        class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none"
+                        aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2"
+                            alt="" width="32" height="32" src="assets/img/user.png"
+                            style="object-fit: cover;"><strong><?= $_SESSION['username'] ?></strong>&nbsp;</a>
+                    <div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a
+                            class="dropdown-item" href="#">New project...</a><a class="dropdown-item"
+                            href="#">Settings</a><a class="dropdown-item" href="#">Profile</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="functions/logout.php">Sign
+                            out</a>
                     </div>
                 </div>
             </div>
@@ -109,15 +160,17 @@ include_once 'functions/authentication.php';
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">New Relay</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <h4 class="modal-title">New Relay</h4><button class="btn-close" type="button" aria-label="Close"
+                        data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <p>Relay Information</p>
                     <form method="post" action="functions/add-relay.php">
-                    <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Name" name="name"><label class="form-label">Name</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text"
+                                placeholder="Name" name="name"><label class="form-label">Name</label></div>
                         <div class="form-floating mb-3"><select class="form-select form-control" name="device">
                                 <optgroup label="Device Information">
-                                    <?php include 'functions/views/get-devices.php'?>
+                                    <?php include 'functions/views/get-devices.php' ?>
                                 </optgroup>
                             </select><label class="form-label">Relay No.</label></div>
                         <div class="form-floating mb-3"><select class="form-select form-control" name="relay">
@@ -134,9 +187,11 @@ include_once 'functions/authentication.php';
                                     <option value="2">Level 2</option>
                                 </optgroup>
                             </select><label class="form-label">Permission Level</label></div>
-                        </div>
-                        <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
-                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button"
+                        data-bs-dismiss="modal">Close</button><button class="btn btn-primary"
+                        type="submit">Save</button></div>
+                </form>
             </div>
         </div>
     </div>
@@ -144,16 +199,18 @@ include_once 'functions/authentication.php';
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">New Relay</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <h4 class="modal-title">New Relay</h4><button class="btn-close" type="button" aria-label="Close"
+                        data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <p>Relay Information</p>
                     <form method="post" action="functions/update-relay.php">
                         <input type="hidden" name="id">
-                    <div class="form-floating mb-3"><input class="form-control form-control" type="text" placeholder="Name" name="name"><label class="form-label">Name</label></div>
+                        <div class="form-floating mb-3"><input class="form-control form-control" type="text"
+                                placeholder="Name" name="name"><label class="form-label">Name</label></div>
                         <div class="form-floating mb-3"><select class="form-select form-control" name="device">
                                 <optgroup label="Device Information">
-                                    <?php include 'functions/views/get-devices.php'?>
+                                    <?php include 'functions/views/get-devices.php' ?>
                                 </optgroup>
                             </select><label class="form-label">Relay No.</label></div>
                         <div class="form-floating mb-3"><select class="form-select form-control" name="relay">
@@ -170,27 +227,32 @@ include_once 'functions/authentication.php';
                                     <option value="2">Level 2</option>
                                 </optgroup>
                             </select><label class="form-label">Permission Level</label></div>
-                        </div>
-                        <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
-                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button"
+                        data-bs-dismiss="modal">Close</button><button class="btn btn-primary"
+                        type="submit">Save</button></div>
+                </form>
             </div>
         </div>
-    </div>                     
+    </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="remove">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Remove Relay</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <h4 class="modal-title">Remove Relay</h4><button class="btn-close" type="button" aria-label="Close"
+                        data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                <form action="functions/remove-relay.php" method="post">
-                    <input type="hidden" name="id" value="">
-                    <p>Are you sure you want to remove this relay?</p>
+                    <form action="functions/remove-relay.php" method="post">
+                        <input type="hidden" name="id" value="">
+                        <p>Are you sure you want to remove this relay?</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button><button class="btn btn-danger" type="submit">Yes</button></div>
-                        </form>
+                    <button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button><button
+                        class="btn btn-danger" type="submit">Yes</button>
                 </div>
+                </form>
+            </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -208,25 +270,25 @@ include_once 'functions/authentication.php';
     <script src="assets/js/sweetalert.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#dataTable').DataTable({
                 dom: 'Blfrtip',
                 buttons: [{
-                        extend: 'excel',
-                        className: 'btn btn-primary'
-                    },
-                    {
-                        extend: 'pdf',
-                        className: 'btn btn-primary'
-                    },
-                    {
-                        extend: 'print',
-                        className: 'btn btn-primary'
-                    }
+                    extend: 'excel',
+                    className: 'btn btn-primary'
+                },
+                {
+                    extend: 'pdf',
+                    className: 'btn btn-primary'
+                },
+                {
+                    extend: 'print',
+                    className: 'btn btn-primary'
+                }
                 ]
             });
 
-            $('a[data-bs-target="#update"]').on('click', function() {
+            $('a[data-bs-target="#update"]').on('click', function () {
                 var id = $(this).data('id');
                 var name = $(this).data('name');
                 var device = $(this).data('device');
@@ -240,25 +302,25 @@ include_once 'functions/authentication.php';
                 $('select[name="level"]').val(level);
             });
 
-            $('button[data-relay="on"]').on('click', function() {
+            $('button[data-relay="on"]').on('click', function () {
                 var ip_address = $(this).data('ip_address');
                 var relay = $(this).data('relay');
-                $.post("http://"+ip_address + "/relay" + relay + "/on", {}, function(data) {
+                $.post("http://" + ip_address + "/relay" + relay + "/on", {}, function (data) {
                     var patientsData = JSON.parse(data);
                     console.log(ip_address, relay);
                 });
             });
 
-            $('button[data-relay="off"]').on('click', function() {
+            $('button[data-relay="off"]').on('click', function () {
                 var ip_address = $(this).data('ip_address');
                 var relay = $(this).data('relay');
-                $.post("http://"+ip_address + "/relay" + relay + "/off", {}, function(data) {
+                $.post("http://" + ip_address + "/relay" + relay + "/off", {}, function (data) {
                     var patientsData = JSON.parse(data);
                     console.log(ip_address, relay);
                 });
             });
 
-            $('a[data-bs-target="#remove"]').on('click', function() {
+            $('a[data-bs-target="#remove"]').on('click', function () {
                 var id = $(this).data('id');
                 console.log(id);
                 $('input[name="id"]').val(id);

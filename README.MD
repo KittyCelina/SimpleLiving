@@ -1,5 +1,5 @@
-# SmartLiving - Home Automation System (Web Application)
-SmartLiving - Home Automation System
+# SmartLiving - Automation System (Web Application)
+SmartLiving - Automation System
 
 ## XAMPP System Specifications
 
