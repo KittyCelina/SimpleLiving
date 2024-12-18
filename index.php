@@ -25,10 +25,7 @@ if (isset($_SESSION['username'])) {
         <div class="d-flex flex-column" id="content-wrapper">
             <nav class="navbar navbar-expand-md bg-body shadow-sm">
                 <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="dashboard.php">
-                        <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-heart-fill">
-                                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"></path>
-                                <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"></path>
-                            </svg></div><span>West Prime Smart Power Automation</span>
+                        <div class="bs-icon-md bs-icon-circle bs-icon-semi-white d-flex flex-shrink-0 justify-content-center align-items-center me-1 d-inline-block bs-icon xl shadow"><img class="img-fluid" src="assets/img/hagohago.png"/></div><span>West Prime Smart Power Automation</span>
                     </a>
                     <div class="collapse navbar-collapse" id="navcol-2">
                         <ul class="navbar-nav ms-auto"></ul><button class="btn btn-primary ms-md-2 d-none" type="button" data-bs-toggle="modal" data-bs-target="#login">Login</button>
@@ -36,7 +33,7 @@ if (isset($_SESSION['username'])) {
                 </div>
             </nav>
             <div id="content">
-                <div class="shadow-lg" style="height: 700px;background: linear-gradient(91deg, rgba(0,0,0,0.00), #1a3c65), url('assets/img/smartliving.png') center / cover;">
+                <div class="shadow-lg" style="height: 700px;background: linear-gradient(91deg, rgba(0,0,0,0.00), #1a3c65), url('assets/img/smartliving.png') center / contain;"> 
                     <div class="container-fluid h-100">
                         <div class="row justify-content-end h-100">
   
@@ -69,8 +66,8 @@ if (isset($_SESSION['username'])) {
                 <div class="container py-4 py-xl-5">
                     <div class="row mb-5">
                         <div class="col-md-8 col-xl-6 text-center mx-auto">
-                            <h2>Features</h2>
-                            <p class="w-lg-50">Enjoy the simplicity of modern living with our intuitive features. <br /> Welcome to a home that works for you.</p>
+                            <h2>Smart Power, Smarter Living</h2>
+                            <p class="w-lg-50">Revolutionize how you interact with your environment.  <br /> West Prime Smart Power Automation brings the future to your fingertips.</p>
                         </div>
                     </div>
                     <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
@@ -80,8 +77,8 @@ if (isset($_SESSION['username'])) {
                                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"></path>
                                     </svg></div>
                                 <div class="px-3">
-                                    <h4>Remote Accessibility</h4>
-                                    <p>Manage lights, home devices, and security from anywhere. Enjoy peace of mind on the go.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <h4>Seamless Remote Control</h4>
+                                    <p>Stay connected, no matter where you are. Manage lighting, appliances, and energy systems remotely with ease and confidence.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                                         </svg></a>
                                 </div>
@@ -95,7 +92,7 @@ if (isset($_SESSION['username'])) {
                                     </svg></div>
                                 <div class="px-3">
                                     <h4>User-friendly Dashboard</h4>
-                                    <p>Intuitive interface for easy control. Personalization options for user preferences.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <p>An intuitive and customizable interface tailored for administrators and staff. Effortlessly oversee and optimize energy usage</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                                         </svg></a>
                                 </div>
@@ -108,7 +105,7 @@ if (isset($_SESSION['username'])) {
                                     </svg></div>
                                 <div class="px-3">
                                     <h4>Enhanced Security & Privacy</h4>
-                                    <p>Your safety matters. We ensure a fortress of protection for your smart home. </p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <p>Rest easy with advanced security protocols protecting your systems. Embrace sustainability with energy-saving automation for a greener tomorrow. </p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                                         </svg></a>
                                 </div>

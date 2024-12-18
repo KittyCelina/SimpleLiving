@@ -43,14 +43,14 @@ include_once 'functions/authentication.php';
             <div id="content">
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Users Management</h3><a
+                        <h3 class="text-dark mb-0">User Management</h3><a
                             class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"
                             data-bs-target="#add" data-bs-toggle="modal"><i
                                 class="fas fa-user-circle fa-sm text-white-50"></i>&nbsp;Create User</a>
                     </div>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Users Lists</p>
+                            <p class="text-primary m-0 fw-bold">User Lists</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
@@ -58,7 +58,6 @@ include_once 'functions/authentication.php';
                                     <thead>
                                         <tr>
                                             <th>Username</th>
-                                            <th>Password</th>
                                             <th>Permission Level</th>
                                             <th>Created At</th>
                                             <th class="text-center">Option</th>
@@ -128,7 +127,7 @@ include_once 'functions/authentication.php';
                                 <path
                                     d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4">
                                 </path>
-                            </svg> Users Logs</a></li>
+                            </svg> User Logs</a></li>
                     <li class="nav-item"><a class="nav-link link-body-emphasis" href="relay_logs.php"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                                 viewBox="0 0 16 16" class="bi bi-people me-2">

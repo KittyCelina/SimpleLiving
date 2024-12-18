@@ -10,7 +10,6 @@ foreach ($results as $row) {
 ?>
     <tr>
         <td><img class="rounded-circle me-2" alt="blank profile picture, mystery man, avatar" width="30" height="30" src="assets/img/user.png"><?= $row['username'] ?></td>
-        <td><?= $row['password'] ?></td>
         <td><?= $row['level'] ?></td>
         <td><?= $row['created_at'] ?></td>
         <td class="text-center">

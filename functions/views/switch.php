@@ -20,10 +20,10 @@ foreach ($results as $row) {
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-success w-100 my-1 relay-on" type="button" data-relay="<?=$row['relay']?>" data-ip_address="<?=$row['ip_address']?>">Turn On</button>
+                        <button class="btn btn-dark w-100 my-1 relay-on" type="button" data-relay="<?=$row['relay']?>" data-ip_address="<?=$row['ip_address']?>" data-userLevel="<?= $_SESSION['level'] ?>" data-level="<?=$row['level']?>">Turn On</button>
                     </div>
                     <div class="col">
-                        <button class="btn btn-danger w-100 my-1 relay-off" type="button" data-relay="<?=$row['relay']?>" data-ip_address="<?=$row['ip_address']?>">Turn Off</button>
+                        <button class="btn btn-dark w-100 my-1 relay-off" type="button" data-relay="<?=$row['relay']?>" data-ip_address="<?=$row['ip_address']?>" data-userLevel="<?= $_SESSION['level'] ?>" data-level="<?=$row['level']?>">Turn Off</button>
                     </div>
                 </div>
             </div>
